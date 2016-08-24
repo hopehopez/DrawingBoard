@@ -38,6 +38,12 @@
     self.color = [UIColor blackColor];
 }
 
+- (void)setImage:(UIImage *)image{
+    _image = image;
+    [self.allPathArray addObject:image];
+    [self setNeedsDisplay];
+}
+
 - (void)pan:(UIPanGestureRecognizer *)pan{
     //获取的当前手指的点
     CGPoint curP = [pan locationInView:self];
@@ -66,8 +72,13 @@
 - (void)drawRect:(CGRect)rect{
     //绘制保存的所有路径
     for (MyBezierPath *path in self.allPathArray) {
-        [path.color set];
-        [path stroke];
+        if ([path isKindOfClass:[UIImage class]]) {
+            UIImage *image = (UIImage *)path;
+            [image drawInRect:rect];
+        } else {
+          [path.color set];
+          [path stroke];
+        }
     }
 }
 

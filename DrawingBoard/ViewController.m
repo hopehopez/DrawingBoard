@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "DrawView.h"
-@interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+#import "HandleImageView.h"
+@interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate,HandleImageViewDelegate>
 @property (weak, nonatomic) IBOutlet DrawView *drawView;
 
 @end
@@ -54,14 +55,17 @@
     
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    NSLog(@"%@",info);
-    
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
-    //NSData *data = UIImageJPEGRepresentation(image, 1);
-    NSData *data = UIImagePNGRepresentation(image);
-    //[data writeToFile:@"/Users/zhangshuqing/Desktop/photo.jpg" atomically:YES];
-    [data writeToFile:@"/Users/zhangshuqing/Desktop/photo.png" atomically:YES];
+    
+    HandleImageView *handleV = [[HandleImageView alloc] init];
+    handleV.backgroundColor = [UIColor clearColor];
+    handleV.frame = self.drawView.frame;
+    handleV.image = image;
+    handleV.delegate = self;
+    [self.view addSubview:handleV];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 - (IBAction)save:(id)sender {
@@ -83,5 +87,8 @@
 //保存完毕时调用
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
     NSLog(@"Success");
+}
+- (void)handleImageView:(HandleImageView *)handleImageView newImage:(UIImage *)image{
+    self.drawView.image = image;
 }
 @end

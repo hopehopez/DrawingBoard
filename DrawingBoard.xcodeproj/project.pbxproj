@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0DBB0C1D6DD76500BA0E40 /* HandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0DBB0B1D6DD76500BA0E40 /* HandleImageView.m */; };
 		7CFD911A1D6C8D6600C23DE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD91191D6C8D6600C23DE6 /* main.m */; };
 		7CFD911D1D6C8D6600C23DE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD911C1D6C8D6600C23DE6 /* AppDelegate.m */; };
 		7CFD91201D6C8D6600C23DE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD911F1D6C8D6600C23DE6 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C0DBB0A1D6DD76500BA0E40 /* HandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleImageView.h; sourceTree = "<group>"; };
+		7C0DBB0B1D6DD76500BA0E40 /* HandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleImageView.m; sourceTree = "<group>"; };
 		7CFD91151D6C8D6600C23DE6 /* DrawingBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFD91191D6C8D6600C23DE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7CFD911B1D6C8D6600C23DE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				7CFD914C1D6C91C800C23DE6 /* DrawView.m */,
 				7CFD914E1D6C9FCC00C23DE6 /* MyBezierPath.h */,
 				7CFD914F1D6C9FCC00C23DE6 /* MyBezierPath.m */,
+				7C0DBB0A1D6DD76500BA0E40 /* HandleImageView.h */,
+				7C0DBB0B1D6DD76500BA0E40 /* HandleImageView.m */,
 				7CFD91241D6C8D6600C23DE6 /* Assets.xcassets */,
 				7CFD91261D6C8D6600C23DE6 /* LaunchScreen.storyboard */,
 				7CFD91291D6C8D6600C23DE6 /* Info.plist */,
@@ -283,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C0DBB0C1D6DD76500BA0E40 /* HandleImageView.m in Sources */,
 				7CFD91201D6C8D6600C23DE6 /* ViewController.m in Sources */,
 				7CFD911D1D6C8D6600C23DE6 /* AppDelegate.m in Sources */,
 				7CFD91501D6C9FCC00C23DE6 /* MyBezierPath.m in Sources */,
@@ -513,6 +519,7 @@
 				7CFD91441D6C8D6700C23DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CFD91451D6C8D6700C23DE6 /* Build configuration list for PBXNativeTarget "DrawingBoardTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +528,7 @@
 				7CFD91471D6C8D6700C23DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CFD91481D6C8D6700C23DE6 /* Build configuration list for PBXNativeTarget "DrawingBoardUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +537,7 @@
 				7CFD914A1D6C8D6700C23DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

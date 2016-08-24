@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DrawView : UIView
+
+
+@property (nonatomic, strong) UIImage *image;
+
 //清屏
 - (void)clear;
 //撤销
